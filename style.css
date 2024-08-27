@@ -6,19 +6,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-ul {
-    padding: 0;
-    display: flex;
-    gap: 25px;
-    margin-right: 5px;
-}
-
 .top {
     display: flex;
     flex-direction: column;
     background-color: rgb(252, 250, 247);
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 20px 5%;
 }
 
 .header {
@@ -27,6 +19,14 @@ ul {
     align-items: center;
     margin-bottom: 50px;
     flex-wrap: wrap;
+}
+
+nav ul {
+    padding: 0;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    list-style-type: none;
 }
 
 .second-header {
@@ -42,21 +42,14 @@ ul {
     border-radius: 10px;
 }
 
-li a {
+nav a {
     text-decoration: none;
     color: #0f0f0f;
-}
-
-li a:hover {
-    color: rgb(112, 111, 111);
-}
-
-li {
-    list-style-type: none;
     font-size: 18px;
 }
 
-li:hover {
+nav a:hover {
+    color: rgb(112, 111, 111);
     font-weight: 900;
 }
 
@@ -71,13 +64,13 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-right: 10px;
     flex: 1;
 }
 
 h1 {
     font-size: 24px;
     color: #0f0f0f;
+    margin: 0;
 }
 
 .header-small {
@@ -89,8 +82,7 @@ h1 {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding: 20px 5%;
 }
 
 .carousel {
@@ -119,28 +111,27 @@ h3 {
     font-weight: 900;
 }
 
-.left-text a, .action a {
-    padding: 3px 15px;
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.button {
+    padding: 10px 20px;
     border: 2px solid #0f0f0f;
     border-radius: 15px;
     background-color: #0f0f0f;
     text-decoration: none;
     color: rgb(252, 250, 247);
     font-weight: 500;
-    width: 60px;
     font-size: 14px;
     text-align: center;
+    display: inline-block;
 }
 
-.action a {
-    align-self: center;
-    min-width: 55px;
-}
-
-.left-text a:hover, .action a:hover {
+.button:hover {
     color: #0f0f0f;
     background-color: rgb(252, 250, 247);
-    border: 2px solid #0f0f0f;
 }
 
 .quote-container {
@@ -153,11 +144,6 @@ h3 {
     margin-top: 50px;
 }
 
-.quoter {
-    display: flex;
-    justify-content: flex-end;
-}
-
 .quote {
     font-size: 24px;
     color: #0f0f0f;
@@ -168,6 +154,7 @@ h3 {
 .quoter {
     font-weight: 900;
     font-size: 18px;
+    text-align: right;
 }
 
 .action {
@@ -177,7 +164,6 @@ h3 {
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
-    flex: 1 1 auto;
     gap: 20px;
     align-items: center;
     flex-wrap: wrap;
@@ -202,21 +188,17 @@ h3 {
 }
 
 @media screen and (max-width: 768px) {
-    .top, .middle, .quote-container, .action {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
     .header, .second-header {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    ul {
+    nav ul {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+        margin-top: 20px;
     }
 
     h2 {
@@ -230,6 +212,11 @@ h3 {
     .action {
         flex-direction: column;
         text-align: center;
+    }
+
+    .button-container {
+        justify-content: center;
+        margin-top: 20px;
     }
 }
 
